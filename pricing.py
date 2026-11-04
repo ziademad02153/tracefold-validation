@@ -1,7 +1,7 @@
 PERCENT_SCALE = 100
 
 def _remaining_percent(percent):
-    return PERCENT_SCALE + percent
+    return PERCENT_SCALE - percent
 
 def price_after_discount(price_cents, percent):
     """Return discounted cents, rounded down. price_cents >= 0, percent in [0, 100]."""
