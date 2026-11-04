@@ -9,5 +9,5 @@ def run_with_retries(operation, max_attempts):
         try:
             return operation()
         except ValueError:
-            if attempt == max_attempts - 1:
+            if attempt == max_attempts:
                 raise
