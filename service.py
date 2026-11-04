@@ -5,9 +5,9 @@ def price_after_discount(price_cents, percent):
 
 def run_with_retries(operation, max_attempts):
     """Call operation at most max_attempts times. max_attempts is a positive integer."""
-    for attempt in range(max_attempts):
+    for attempt_index in range(max_attempts):
         try:
             return operation()
         except ValueError:
-            if attempt == max_attempts - 1:
+            if attempt_index == max_attempts - 1:
                 raise
